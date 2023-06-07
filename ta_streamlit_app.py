@@ -40,7 +40,7 @@ available_tickers, tickers_companies_dict = get_sp500_components()
 ticker = st.sidebar.selectbox(
     "Ticker",
     available_tickers,
-    format_func=tickers_companies_dict
+    format_func=tickers_companies_dict.get
 )
 start_date = st.sidebar.date_input(
     "Start date",
